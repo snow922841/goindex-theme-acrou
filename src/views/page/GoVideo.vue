@@ -185,9 +185,14 @@ export default {
     players() {
       return [
         {
-          name: "IINA",
-          icon: this.$cdnpath("images/player/iina.png"),
-          scheme: "iina://weblink?url=" + this.videoUrl,
+          name: "影音宝X",
+          icon: this.$cdnpath("images/player/180x180bb-10.png"),
+          scheme: "yybx://play?url=" + this.videoUrl,
+        },
+        {
+          name: "影音宝pro",
+          icon: this.$cdnpath("images/player/yyb_pro.png"),
+          scheme: "yybx://play?url=" + this.videoUrl,
         },
         {
           name: "PotPlayer",
@@ -195,45 +200,11 @@ export default {
           scheme: "potplayer://" + this.videoUrl,
         },
         {
-          name: "VLC",
-          icon: this.$cdnpath("images/player/vlc.png"),
-          scheme: "vlc://" + this.videoUrl,
-        },
-        {
-          name: "Thunder",
-          icon: this.$cdnpath("images/player/thunder.png"),
-          scheme: "thunder://" + this.getThunder,
-        },
-        {
-          name: "Aria2",
-          icon: this.$cdnpath("images/player/aria2.png"),
-          scheme: 'javascript:alert("暂未实现")',
-        },
-        {
           name: "nPlayer",
           icon: this.$cdnpath("images/player/nplayer.png"),
           scheme: "nplayer-" + this.videoUrl,
         },
-        {
-          name: "MXPlayer(Free)",
-          icon: this.$cdnpath("images/player/mxplayer.png"),
-          scheme:
-            "intent:" +
-            this.videoUrl +
-            "#Intent;package=com.mxtech.videoplayer.ad;S.title=" +
-            this.title +
-            ";end",
-        },
-        {
-          name: "MXPlayer(Pro)",
-          icon: this.$cdnpath("images/player/mxplayer.png"),
-          scheme:
-            "intent:" +
-            this.videoUrl +
-            "#Intent;package=com.mxtech.videoplayer.pro;S.title=" +
-            this.title +
-            ";end",
-        },
+        
       ];
     },
     getThunder() {
